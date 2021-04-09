@@ -3,7 +3,6 @@ const answersArray = Array.from(document.getElementsByClassName('answer'));
 const buttonsVisibilityValuesArray = [true,true,true,true,true];
 
 function toggleVisibility(item){
-    let thisItem = buttonsArray[item];
     let itemVisibility = buttonsVisibilityValuesArray[item];
     let answer = answersArray[item];
 
@@ -19,7 +18,6 @@ function toggleVisibility(item){
 };
 
 for (var item=0 ; item < buttonsArray.length; item++ ) { 
-    buttonsArray[item].style.display = "block";
     let thisElement = item;
     buttonsArray[item].addEventListener("click", () => toggleVisibility(thisElement));
 }
