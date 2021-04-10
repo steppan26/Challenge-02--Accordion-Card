@@ -16,14 +16,14 @@ function toggleVisibility(item){
     if(itemVisibility){
         answer.style.display = "none";
         question.style.fontWeight = "400";
-        question.style.fontSize = "1em";
+        question.style.fontSize = "0.9em";
         arrow.style.rotate ="0deg";
         buttonsVisibilityValuesArray[item] = false;
         return;
     } else {
         answer.style.display = "block";
         question.style.fontWeight = "700";
-        question.style.fontSize = "0.9em";
+        question.style.fontSize = "0.85em";
         arrow.style.rotate ="180deg";
         buttonsVisibilityValuesArray[item] = true;
         return;
@@ -43,7 +43,7 @@ function closeAll(){
         buttonsVisibilityValuesArray[item] = false;
         answer.style.display = "none";
         question.style.fontWeight = "400";
-        question.style.fontSize = "1em";
+        question.style.fontSize = "0.9em";
         arrow.style.rotate ="0deg";
     }
 }
