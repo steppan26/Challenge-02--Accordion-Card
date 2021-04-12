@@ -55,7 +55,6 @@ body{
     padding: 0em 1.5em 1.8rem 1.5em;
     width:320px;
     height: 500px;
-
 }
 
 
@@ -120,9 +119,6 @@ h1{
     border: none;
 }
 
-.clickable:hover{
-    color: var(--clr-primary-light-red);
-}
 
 .question{
     font-weight: 400;
@@ -217,7 +213,11 @@ h1{
         width: 80%;        
     }
 
+    .question:hover{
+        color: var(--clr-primary-light-red);
+    }
+
 }
 
 .attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution { color: var(--clr-neutral-blue-700); }
