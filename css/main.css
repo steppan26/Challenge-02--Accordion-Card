@@ -31,25 +31,34 @@ body{
 
 .bg-color-gradient{
     background-image: linear-gradient(to bottom, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    height: 100vh;
 }
 
 .wrapper{
+    position: relative;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     width: 100%;
+    height: 100%;
+}
+
+.emailBoxImgDesktop{
+    display: none;
 }
 
 .card{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20vh 0vh 1vh 0vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 3fr;
+    justify-items: center;
+
+    margin: 1vh 0vh 1vh 0vh;
     background-color: white;
     border-radius: 25px;
-    padding: 7em 2em 1.5rem 1.5em;
-    width:350px;
+    padding: 0 2em 1.8rem 1.5em;
+    width:320px;
     height: 500px;
 
 }
@@ -64,23 +73,30 @@ h1{
     margin-bottom: 2rem;
 }
 
-
 .imgWrapper{
     position: relative;
-    width: 250px;
-    max-height: 165px;
-    top: 235px;
+    max-width: 250px;
+    grid-row: 1 / 2;
+    top: -1vh;
+    width: 100%;
 }
 
 .emailBoxImg{
     position: absolute;
-    top: -30px;
-    width: 150px;
-    padding-right: 60px;
+    grid-row: 1 / 2;
+    z-index: 10;
+    top: -40px;
+    left: -20px;
+    width: 120px;
 }
 
-.shawdowImg{
+.shawdowImgMobile{
     position: relative;
+    top: 2vh;
+}
+
+.shawdowImgDesktop{
+    display: none;
 }
 
 .mainImg{
@@ -90,6 +106,7 @@ h1{
 }
 
 .questionsList{
+    grid-row: 2 / 3;
     width: 100%;
 }
 
@@ -100,6 +117,10 @@ h1{
     text-align: left;
     background-color: white;
     border: none;
+}
+
+.clickable:hover{
+    color: var(--clr-primary-light-red);
 }
 
 .question{
@@ -128,38 +149,62 @@ h1{
     opacity: 30%;
 }
 
-@media only screen and (min-width: 800px){
-    .wrapper{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 70vh;
-        width: 60vw;
-        margin: 15vh 15vw 15vh 15vw;
+@media only screen and (min-width: 1080px){
+
+    body{
+        font-size: 1.5rem;
     }
 
     .card{
-        grid-column: 1 / 3;
-        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
         margin: auto;
-        height: 100%;
+        padding: 3em;
+        width: 1050px;
+        height: 600px;
+        overflow: hidden;
     }
 
     .imgWrapper{
-        position: absolute;
-        width: 45%;
-        max-width: 25em;
-        top: 70vh;
+        grid-column: 1 / 2;
+        position: relative;
+        width: 100%;
+        max-width: none;
+        grid-row: 1/2;
+        left: -150px;
+        top: 20%;
     }
 
-    .mainImg{
+    .shawdowImgMobile{
+        display: none;
+    }
+    
+    .shawdowImgDesktop{
+        position: relative;
+        display: block;
+        top: -450px;
+        left: -450px;
+        width: 200%;
+    }
+
+    .emailBoxImg{
+        display: block;
         position: absolute;
-        top: -35vh;
+        left: -50px;
+        top: 0;
+        width: 250px;
+    
+    }
+
+    h1{
+        text-align: left;
     }
 
     .questionsList{
-        align-self: flex-end;
-        width: 50%;
-        
+        grid-column: 2 / 3;
+        grid-row: 1/2;
+        width: 80%;        
     }
 
 }

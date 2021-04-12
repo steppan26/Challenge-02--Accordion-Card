@@ -11,7 +11,7 @@ function toggleVisibility(item){
     const question = questionsArray[item];
 
     
-    closeAll();
+    closeAllAnswers();
 
     if(itemVisibility){
         answer.style.display = "none";
@@ -30,11 +30,7 @@ function toggleVisibility(item){
     }
 };
 
-function resetMenuFonts(){
-    
-}
-
-function closeAll(){
+function closeAllAnswers(){
     for (var item=0 ; item < buttonsArray.length; item++ ) { 
         const answer = answersArray[item];
         const arrow = arrowsArray[item];
@@ -49,7 +45,7 @@ function closeAll(){
 }
 
 
-closeAll();
+closeAllAnswers();
 
 for (var item=0 ; item < buttonsArray.length; item++ ) { 
     buttonsVisibilityValuesArray[item] = false;
