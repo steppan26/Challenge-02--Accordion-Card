@@ -10,7 +10,7 @@ function toggleVisibility(item){
     const arrow = arrowsArray[item];
     const question = questionsArray[item];
 
-    
+
     closeAllAnswers();
 
     if(itemVisibility){
@@ -31,7 +31,7 @@ function toggleVisibility(item){
 };
 
 function closeAllAnswers(){
-    for (var item=0 ; item < buttonsArray.length; item++ ) { 
+    for (var item=0 ; item < buttonsArray.length; item++ ) {
         const answer = answersArray[item];
         const arrow = arrowsArray[item];
         const question = questionsArray[item];
@@ -47,7 +47,7 @@ function closeAllAnswers(){
 
 closeAllAnswers();
 
-for (var item=0 ; item < buttonsArray.length; item++ ) { 
+for (var item=0 ; item < buttonsArray.length; item++ ) {
     buttonsVisibilityValuesArray[item] = false;
     let thisElement = item;
     buttonsArray[item].addEventListener("click", () => toggleVisibility(thisElement));
