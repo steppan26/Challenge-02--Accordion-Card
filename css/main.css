@@ -49,14 +49,13 @@ body{
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 3fr;
     display: unset;
-    margin: 1vh 0vh 1vh 0vh;
+    margin: 1vh 0vh 0vh 0vh;
     background-color: white;
     border-radius: 25px;
     padding: 0em 1.5em 1.8rem 1.5em;
     width:320px;
     height: 500px;
 }
-
 
 h1{
     color: var(--clr-neutral-blue-700);
@@ -161,7 +160,17 @@ h1{
         padding: 2em 3em 3em 3em;
         width: 900px;
         height: 500px;
-        /* overflow: hidden; */
+    }
+
+    .card:after {
+        content:"";
+        position:absolute;
+        width:100%;
+        bottom:1px;
+        z-index:-1;
+        transform:scale(.9);
+        box-shadow: 0px 10px 2rem 0.75rem #000000;
+        opacity: 60%;
     }
 
     .imgWrapper{
@@ -219,5 +228,5 @@ h1{
 
 }
 
-.attribution { font-size: 11px; text-align: center; }
+.attribution { padding-top: 5vh; font-size: 11px; text-align: center; }
 .attribution { color: var(--clr-neutral-blue-700); }
